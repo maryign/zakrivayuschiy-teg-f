@@ -31,11 +31,13 @@
     justify-content: center;
     /*align-items: center;*/
 }
+
 @supports (font-variation-settings: normal) {
     body {
         font-family: 'Inter-Variable', sans-serif;
     }
 }
+
 /*header*/
 .card {
     background-color: var(--background-color);
@@ -142,40 +144,43 @@
     font-size: 18px;
     text-align: left;
 }
-.contrast{
+
+.contrast {
     filter: contrast(20%);
 }
 
-.bright{
+.bright {
     filter: brightness(200%);
 }
-.blur{
+
+.blur {
     filter: blur(3.2rem);
 }
 
-.opacity{
+.opacity {
     filter: opacity(0.8);
 }
 
-.grayscale{
+.grayscale {
     filter: grayscale(0.8);
 }
 
-.saturate{
+.saturate {
     filter: saturate(158%);
 }
 
-.hue_rotate{
+.hue_rotate {
     filter: hue-rotate(-90deg);
 }
 
-.sepia{
+.sepia {
     filter: sepia(80%);
 }
 
-.multiple{
+.multiple {
     filter: sepia(1) contrast(2) brightness(200%);
 }
+
 section .card_button_group {
     display: flex;
     margin: 0 25px 25px auto;
@@ -279,6 +284,7 @@ dialog {
     width: 100%;
     height: 38px;
     color: var(--font-color);
+    overflow: hidden;
 
 }
 
@@ -322,9 +328,9 @@ dialog {
 .theme-menu__button:disabled::before {
     content: '▶';
     opacity: 0.6;
-    position:absolute;
-    display:block;
-    left:-20px;
+    position: absolute;
+    display: block;
+    left: -20px;
     animation: rotatemove 0.5s ease-in-out infinite alternate;
 }
 
@@ -391,7 +397,7 @@ button.save_button:focus {
     transition: color 0.3s ease;
 }
 
-.save_icon {
+.button_with_border:hover .save_icon {
     position: relative;
     z-index: 1;
     mix-blend-mode: difference;
@@ -433,6 +439,7 @@ path.core {
     fill: var(--heart-countour-color);
     transform: scale(1);
 }
+
 path.main-body {
     /*fill: var(--heart-countour-color);*/
     transition: fill 0.3s linear 0.05s;
@@ -442,10 +449,10 @@ path.main-body {
     fill: var(--heart-countour-color);
     transform: scale(1);
     /*transition: fill 0.3s linear 0.05s, transform 3s;!*delay is the last one*!*/
-/*    transition-property: width;
-  transition-duration: 2s;
-  transition-timing-function: linear;
-  transition-delay: 1s;*/
+    /*    transition-property: width;
+      transition-duration: 2s;
+      transition-timing-function: linear;
+      transition-delay: 1s;*/
 }
 
 
