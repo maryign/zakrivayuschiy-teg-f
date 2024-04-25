@@ -16,8 +16,7 @@
     --background: repeating-linear-gradient(to right, rgb(0, 0, 0, 1), rgb(0, 0, 0, 0) 2px),
     repeating-linear-gradient(to bottom, rgb(0, 0, 0, 1), rgb(0, 0, 0, 0) 2px),
     linear-gradient(to bottom, #007f0c, #004306);
-    --heart-countour-color:#00CC14;
-
+    --heart-countour-color: #00CC14;
 }
 
 :root.theme-light {
@@ -31,13 +30,21 @@
     --background: repeating-linear-gradient(to right, rgb(211, 211, 211, 1), rgb(211, 211, 211, 0) 2px),
     repeating-linear-gradient(to bottom, rgb(211, 211, 211, 1), rgb(211, 211, 211, 0) 2px),
     linear-gradient(to bottom, #e7e7e7, #1a1a1a);
-    --heart-countour-color:#000000;
-
+    --heart-countour-color: #000000;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --background-color: #000000;
-        /*    copy dark variables*/
+        --main-color: #00CC14;
+        --font-color: #00CC14;
+        --header-font-weight: 785;
+        --text-font-weight: 465;
+        --favicon-color: #00CC14;
+        --outline-border-styles: 2px solid var(--main-color);
+        --background: repeating-linear-gradient(to right, rgb(0, 0, 0, 1), rgb(0, 0, 0, 0) 2px),
+        repeating-linear-gradient(to bottom, rgb(0, 0, 0, 1), rgb(0, 0, 0, 0) 2px),
+        linear-gradient(to bottom, #007f0c, #004306);
+        --heart-countour-color: #00CC14;
     }
 }

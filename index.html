@@ -405,17 +405,14 @@
     </ul>
 </main>
 <footer class="footer">
-    <div class='card_button_group'
-         type="button"
-         onclick="window['save-dialog'].showModal();"
-         aria-controls="save-dialog">
-        <button class="save_button button_with_border">
-            <svg class="save_icon">
-                <use href="svg/floppy.svg#save"></use>
-            </svg>
-            <span class='button__text'>Сохранить на память</span>
-        </button>
-    </div>
+    <button class="save_button button_with_border" type="button"
+            onclick="window['save-dialog'].showModal();"
+            aria-controls="save-dialog">
+        <svg class="save_icon">
+            <use href="svg/floppy.svg#save"></use>
+        </svg>
+        <span class='button__text'>Сохранить на память</span>
+    </button>
     <dialog id="save-dialog">
         <div class="dialog_window">
             <h2 class="dialog_data">
