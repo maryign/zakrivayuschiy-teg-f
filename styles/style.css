@@ -395,7 +395,6 @@ path.core {
 .like-icon:hover path.core {
     fill: var(--heart-countour-color);
     transform: scale(1);
-    /*transition: fill 0.3s linear, transform 1s;*/
 }
 path.main-body {
     /*fill: var(--heart-countour-color);*/
