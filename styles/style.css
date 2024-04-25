@@ -31,7 +31,11 @@
     justify-content: center;
     /*align-items: center;*/
 }
-
+@supports (font-variation-settings: normal) {
+    body {
+        font-family: 'Inter-Variable', sans-serif;
+    }
+}
 /*header*/
 .card {
     background-color: var(--background-color);
@@ -138,7 +142,40 @@
     font-size: 18px;
     text-align: left;
 }
+.contrast{
+    filter: contrast(20%);
+}
 
+.bright{
+    filter: brightness(200%);
+}
+.blur{
+    filter: blur(3.2rem);
+}
+
+.opacity{
+    filter: opacity(0.8);
+}
+
+.grayscale{
+    filter: grayscale(0.8);
+}
+
+.saturate{
+    filter: saturate(158%);
+}
+
+.hue_rotate{
+    filter: hue-rotate(-90deg);
+}
+
+.sepia{
+    filter: sepia(80%);
+}
+
+.multiple{
+    filter: sepia(1) contrast(2) brightness(200%);
+}
 section .card_button_group {
     display: flex;
     margin: 0 25px 25px auto;
