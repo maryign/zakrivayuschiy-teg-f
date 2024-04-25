@@ -35,7 +35,15 @@ input {
   color: currentColor;
   font-family: inherit;
   font-size: inherit;
+  border: none;
+  background-color: transparent;
+  padding-block: 0;
+  padding-inline: 0;
 }
+
+/*button{*/
+/*  border: var(--outline-border-styles);*/
+/*}*/
 
 ul,
 ol {
