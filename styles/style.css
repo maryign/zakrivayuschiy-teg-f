@@ -17,7 +17,7 @@
     min-inline-size: 320px;
     min-block-size: 100dvb;
     font-family: var(--font-name-basic);
-    font-weight: var(--text-font-weight);
+    font-variation-settings: 'wght' var(--text-font-weight);
     font-size: var(--text-font-size);
     color: var(--font-color);
     background-image: var(--background);
@@ -27,9 +27,7 @@
     background-size: cover;
     display: grid;
     margin: 100px 0 100px 0;
-    /*display: flex;*/
     justify-content: center;
-    /*align-items: center;*/
 }
 
 @supports (font-variation-settings: normal) {
@@ -38,7 +36,6 @@
     }
 }
 
-/*header*/
 .card {
     background-color: var(--background-color);
     border: var(--outline-border-styles);
@@ -75,7 +72,6 @@
     position: relative;
 }
 
-/*Создайте псевдоэлемент, который будет отрисовываться снизу.*/
 .theme-menu__button::after {
     content: '';
     display: block;
@@ -87,7 +83,6 @@
     transition: width 0.5s;
 }
 
-/*main*/
 .card_list {
     display: flex;
     flex-direction: column;
@@ -102,7 +97,7 @@
 .card_header {
     padding: 5px 25px 5px 10px;
     font-size: var(--header-font-size);
-    font-weight: var(--header-font-weight);
+    font-variation-settings: 'wght' var(--header-font-weight);
     border: var(--outline-border-styles);
     text-align: left;
 }
@@ -202,31 +197,17 @@ section .card_button_group {
     align-items: center;
 }
 
-/*.like-icon path {*/
-/*    fill: var(--main-color);*/
-/*}*/
-
-/*footer*/
 .footer {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 55px min(35px) auto min(35px);
-    /*width: auto;*/
-    /*height: auto;*/
 }
 
 .save_button {
-    /*min-width: 306px;*/
-    /*max-width: 335px;*/
-    /*min-height: 58px;*/
-    /*max-height: 84px;*/
     padding: 15px 20px;
-    /*padding-bottom: 15px;*/
-    /*padding-top: 15px;*/
     gap: 8px;
     overflow: hidden;
-
 }
 
 .save_icon {
@@ -237,14 +218,11 @@ section .card_button_group {
     width: 2em;
     color: var(--font-color);
     overflow: hidden;
-
 }
 
-/*dialog*/
 dialog {
     background-color: var(--background-color);
     border: var(--outline-border-styles);
-
 }
 
 .dialog_window {
@@ -264,9 +242,6 @@ dialog {
     gap: 20px;
 }
 
-/*.dialog_data .save_icon use{*/
-/*    background-size: 39px 39px;*/
-/*}*/
 .dialog_text {
     display: flex;
     flex-direction: row;
@@ -285,10 +260,8 @@ dialog {
     height: 38px;
     color: var(--font-color);
     overflow: hidden;
-
 }
 
-/*general*/
 .button_with_border {
     display: flex;
     flex-direction: row;
@@ -300,16 +273,6 @@ dialog {
     position: relative;
 }
 
-/*@media (width <= 375px){
-??????
-}*/
-
-
-/*states*/
-
-/*Плавности отрисовки можно добиться постепенным масштабированием (scale) этого элемента по оси X.*/
-
-/*Без cостояния focus-visible элемент масштабирован в 0, а в этом состоянии — 1.*/
 .theme-menu__button:focus-visible::after {
     width: 100%;
     transform: scale(1);
@@ -331,7 +294,7 @@ dialog {
     position: absolute;
     display: block;
     left: -20px;
-    animation: rotatemove 0.5s ease-in-out infinite alternate;
+    animation: rotateMove 0.5s ease-in-out infinite alternate;
 }
 
 .theme-menu__button:disabled {
@@ -343,16 +306,6 @@ dialog {
 .theme-menu__button:hover {
     opacity: 0.6;
     transition: opacity 0.3s ease;
-}
-
-@keyframes rotatemove {
-    from {
-        transform: translateX(0);
-    }
-
-    to {
-        transform: translateX(4px);
-    }
 }
 
 button:focus-visible {
@@ -386,7 +339,7 @@ button.save_button:focus {
     width: 100%;
     height: 100%;
     background-color: var(--main-color);
-    animation: fillbutton 0.5s ease-in-out alternate;
+    animation: fillButton 0.5s ease-in-out alternate;
 }
 
 .button_with_border:hover .button__text {
@@ -405,71 +358,7 @@ button.save_button:focus {
     transition: color 0.3s ease;
 }
 
-@keyframes fillbutton {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-/*Сердце анимируется в трёх состояниях:
-при ховере (и наоборот, когда уводим курсор),
-при нажатии и удержании (в состоянии :active),
-при клике.*/
-
-/*При наведении на иконку сначала закрашивается акцентным цветом сердцевина, а потом основное тело.
-Все анимации на ховере производятся в линейное время, а вот с длительностью и задержкой нужно разбираться отдельно.*/
-/*Для этой анимации не нужны кифреймы.
-Просто опишите плавность изменения значения fill для нужных элементов иконки.
-Меняйте значение у сердцевины сразу же при наведении мышки и в течение 0.3s.
-А в обратной ситуации, когда курсор уходит, — с задержкой в 0.03s,
-ведь вам нужно будет дождаться, когда потухнет основное тело.
-Временные интервалы будут идти немного внахлёст, это создаст нужное ощущение плавности.
-Основное тело сердца при наведении курсора перекрашивайте с задержкой в 0.05s в течение 0.3s.
-А когда курсор уходит с сердца, основное тело, наоборот, становится прозрачным без задержек и перекрашивается всё те же 0.3s.
-Обратите внимание, что вся заливка при наведении происходит цветом контура.*/
-path.core {
-    /*fill: var(--heart-countour-color);*/
-    transition: fill 0.3s linear;
-}
-
-.like-icon:hover path.core {
-    fill: var(--heart-countour-color);
-    transform: scale(1);
-}
-
-path.main-body {
-    /*fill: var(--heart-countour-color);*/
-    transition: fill 0.3s linear 0.05s;
-}
-
-.like-icon:hover path.main-body {
-    fill: var(--heart-countour-color);
-    transform: scale(1);
-    /*transition: fill 0.3s linear 0.05s, transform 3s;!*delay is the last one*!*/
-    /*    transition-property: width;
-      transition-duration: 2s;
-      transition-timing-function: linear;
-      transition-delay: 1s;*/
-}
-
-
-/*.like-icon path {*/
-/*    fill: var(--main-color);*/
-/*}*/
-/*@keyframes fillHeartOnHover {*/
-/*    from {*/
-/*        transform: translateX(-100%);*/
-/*    }*/
-/*    to {*/
-/*        transform: translateX(0);*/
-/*    }*/
-/*}*/
-/*save*/
 dialog::backdrop {
     background-color: #000000;
     opacity: 0.75;
-    /*backdrop-filter: blur(7px);*/
 }
