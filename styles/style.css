@@ -92,10 +92,11 @@
 .theme-menu__button::after {
     content: "";
     display: block;
+    position: absolute;
     width: 0%;
     height: 2px;
-    margin-top: 3px;
-    background-color: var(--main-color, #000000);
+    top: 15px;
+    background-color: var(--main-color);
     opacity: 0.6;
     transition: width 0.5s;
 }
@@ -337,6 +338,10 @@ dialog {
     transition: opacity 0.3s ease;
 }
 
+a:focus-visible {
+    outline: none;
+}
+
 button:focus-visible {
     outline: none;
 }
@@ -385,7 +390,6 @@ button.save_button:focus {
 .button_with_border:hover .button__text {
     position: relative;
     z-index: 1;
-    mix-blend-mode: difference;
     color: var(--background-color, #FFFFFF);
     transition: color 0.3s ease;
 }
@@ -393,7 +397,6 @@ button.save_button:focus {
 .button_with_border:hover .save_icon {
     position: relative;
     z-index: 1;
-    mix-blend-mode: difference;
     color: var(--background-color, #FFFFFF);
     transition: color 0.3s ease;
 }
