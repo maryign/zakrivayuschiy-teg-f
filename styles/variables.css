@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-    --font-name-basic: 'Inter', san-serif;
-    --font-name-accent: 'PressStart2P', san-serif;
+    --font-name-basic: "Inter", san-serif;
+    --font-name-accent: "PressStart2P", san-serif;
     --header-font-weight: 700;
     --text-font-weight: 400;
     --header-font-size: 18px;
@@ -10,7 +10,7 @@
     --main-color: #000000;
     --font-color: #000000;
     --favicon-color: #000000;
-    --outline-border-styles: 2px solid var(--main-color);
+    --outline-border-styles: 2px solid var(--main-color,#000000);
     --background: repeating-linear-gradient(to right, rgb(211, 211, 211, 1), rgb(211, 211, 211, 0) 2px),
     repeating-linear-gradient(to bottom, rgb(211, 211, 211, 1), rgb(211, 211, 211, 0) 2px),
     linear-gradient(to bottom, #e7e7e7, #1a1a1a);
