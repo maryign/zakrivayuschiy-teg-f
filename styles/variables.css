@@ -7,13 +7,15 @@
     --header-font-size: 18px;
     --text-font-size: 14px;
     --background-color: #FFFFFF;
+    --button-color: #FFFFFF;
     --main-color: #000000;
     --font-color: #000000;
     --favicon-color: #000000;
-    --outline-border-styles: 2px solid var(--main-color,#000000);
-    --background: repeating-linear-gradient(to right, rgb(211, 211, 211, 1), rgb(211, 211, 211, 0) 2px),
-    repeating-linear-gradient(to bottom, rgb(211, 211, 211, 1), rgb(211, 211, 211, 0) 2px),
-    linear-gradient(to bottom, #e7e7e7, #1a1a1a);
+    --outline-border-styles: 2px solid var(--main-color, #000000);
+    --gradient1-color1: rgb(211, 211, 211, 1);
+    --gradient1-color2: rgb(211, 211, 211, 0);
+    --gradient2-color1: #e7e7e7;
+    --gradient2-color2: #1a1a1a;
     --heart-countour-color: #000000;
     --heart-sparks-color: #FF0000;
 }

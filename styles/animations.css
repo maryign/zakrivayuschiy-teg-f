@@ -67,11 +67,11 @@
 }
 
 .like-icon.is-liked {
-    animation: heartScale 0.3s ease-in 0.1s;
+    animation: heartScale 0.3s ease-in 1 alternate 0.1s;
 }
 
 .like-icon.is-liked path.sparks {
-    animation: heartSparks 0.3s ease-in 0.3s;
+    animation: heartSparks 0.3s ease-in 1 alternate 0.3s;
 }
 
 @keyframes fillButton {
