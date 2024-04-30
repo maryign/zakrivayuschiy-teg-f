@@ -434,7 +434,9 @@ dialog::backdrop {
     .logo_header {
         margin-top: 136px;
     }
+}
 
+@media (width >= 410px) {
     .save_icon {
         height: 21px;
         width: 21px;
