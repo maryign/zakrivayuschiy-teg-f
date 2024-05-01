@@ -13,7 +13,6 @@
     --header-font-weight: 785;
     --text-font-weight: 465;
     --favicon-color: #00CC14;
-    --outline-border-styles: 2px solid var(--main-color);
     --gradient1-color1: rgb(0, 0, 0, 1);
     --gradient1-color2: rgb(0, 0, 0, 0);
     --gradient2-color1: #007f0c;
@@ -29,7 +28,6 @@
     --header-font-weight: 700;
     --text-font-weight: 400;
     --favicon-color: #000000;
-    --outline-border-styles: 2px solid var(--main-color);
     --gradient1-color1: rgb(211, 211, 211, 1);
     --gradient1-color2: rgb(211, 211, 211, 0);
     --gradient2-color1: #e7e7e7;
@@ -46,7 +44,6 @@
         --header-font-weight: 785;
         --text-font-weight: 465;
         --favicon-color: #00CC14;
-        --outline-border-styles: 2px solid var(--main-color);
         --gradient1-color1: rgb(0, 0, 0, 1);
         --gradient1-color2: rgb(0, 0, 0, 0);
         --gradient2-color1: #007f0c;

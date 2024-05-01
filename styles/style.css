@@ -20,9 +20,9 @@
     font-variation-settings: "wght" var(--text-font-weight, 400);
     font-size: var(--text-font-size, 14px);
     color: var(--font-color, #000000);
-    background-image: repeating-linear-gradient(to right, var(--gradient1-color1, rgb(211, 211, 211, 1)), var(--gradient1-color2, rgb(211, 211, 211, 0)) 2px),
-    repeating-linear-gradient(to bottom, var(--gradient1-color1, rgb(211, 211, 211, 1)), var(--gradient1-color2, rgb(211, 211, 211, 0)) 2px),
-    linear-gradient(to bottom, var(--gradient2-color1, #e7e7e7), var(--gradient2-color2, #1a1a1a));
+    background-image: repeating-linear-gradient(90deg, var(--gradient1-color1, rgb(211, 211, 211, 1)) 0 2px, var(--gradient1-color2, rgb(211, 211, 211, 0)) 2px 4px),
+    repeating-linear-gradient(180deg, var(--gradient1-color1, rgb(211, 211, 211, 1)) 0 2px, var(--gradient1-color2, rgb(211, 211, 211, 0)) 2px 4px),
+    linear-gradient(180deg, var(--gradient2-color1, #e7e7e7) 0%, var(--gradient2-color2, #1a1a1a) 100%);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
@@ -40,7 +40,7 @@
 
 .card {
     background-color: var(--background-color, #FFFFFF);
-    border: var(--outline-border-styles);
+    border: 2px solid var(--main-color, #000000);
     max-width: 700px;
 }
 
@@ -96,7 +96,7 @@
     width: 0%;
     height: 2px;
     top: 15px;
-    background-color: var(--main-color);
+    background-color: var(--main-color, #000000);
     opacity: 0.6;
     transition: width 0.5s;
 }
@@ -109,20 +109,20 @@
 }
 
 .card_section {
-    border: var(--outline-border-styles);
+    border: 2px solid var(--main-color, #000000);
 }
 
 .card_header {
     padding: 5px 25px 5px 10px;
     font-size: var(--header-font-size, 18px);
     font-variation-settings: "wght" var(--header-font-weight, 700);
-    border-bottom: var(--outline-border-styles);
+    border-bottom: 2px solid var(--main-color, #000000);
     text-align: left;
 }
 
 .card_image {
     width: 100%;
-    border: var(--outline-border-styles);
+    border: 2px solid var(--main-color, #000000);
     aspect-ratio: 1/1;
 }
 
@@ -208,7 +208,7 @@
 }
 
 .card__like-button {
-    padding: 7px 34px 7px 34px;
+    min-width: 130px;
     overflow: hidden;
 }
 
@@ -251,7 +251,7 @@
 
 dialog {
     background-color: var(--background-color, #FFFFFF);
-    border: var(--outline-border-styles);
+    border: 2px solid var(--main-color, #000000);
     width: clamp(341px, 353px, 353px);
     padding: 0;
     overflow: hidden;
@@ -310,7 +310,7 @@ dialog {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    border: var(--outline-border-styles);
+    border: 2px solid var(--main-color, #000000);
     font-family: var(--font-name-accent, "PressStart2P", san-serif);
     position: relative;
     background-color: var(--background-color, #FFFFFF);
@@ -364,27 +364,12 @@ button:focus-visible {
 }
 
 .card__icon-button:focus-visible {
-    border: var(--outline-border-styles);
+    border: 2px solid var(--main-color, #000000);
     transition: 0.3s ease;
 }
 
-button.card__like-button:focus-visible {
-    box-shadow: 2px 2px 0 var(--main-color);
-    transition: 0.5s ease-in-out;
-}
-
-button.card__like-button:focus {
-    box-shadow: 2px 2px 0 var(--main-color);
-    transition: 0.5s ease-in-out;
-}
-
-button.save_button:focus-visible {
-    box-shadow: 2px 2px 0 var(--main-color);
-    transition: 0.5s ease-in-out;
-}
-
-button.save_button:focus {
-    box-shadow: 2px 2px 0 var(--main-color);
+.button_with_border:focus-visible {
+    box-shadow: 2px 2px 0 var(--main-color, #000000);
     transition: 0.5s ease-in-out;
 }
 
@@ -409,11 +394,17 @@ button.save_button:focus {
     animation: fillButton 0.5s ease-in-out normal;
 }
 
+.button__text {
+    position: relative;
+    z-index: 1;
+    color: var(--button-color, #FFFFFF);
+    mix-blend-mode: difference;
+}
+
 .button_with_border:hover .button__text {
     position: relative;
     z-index: 1;
     color: var(--button-color, #FFFFFF);
-    transition: color 0.3s ease;
     mix-blend-mode: difference;
 }
 
@@ -421,7 +412,6 @@ button.save_button:focus {
     position: relative;
     z-index: 1;
     color: var(--button-color, #FFFFFF);
-    transition: color 0.3s ease;
     mix-blend-mode: difference;
 }
 

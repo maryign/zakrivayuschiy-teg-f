@@ -11,7 +11,6 @@
     --main-color: #000000;
     --font-color: #000000;
     --favicon-color: #000000;
-    --outline-border-styles: 2px solid var(--main-color, #000000);
     --gradient1-color1: rgb(211, 211, 211, 1);
     --gradient1-color2: rgb(211, 211, 211, 0);
     --gradient2-color1: #e7e7e7;
